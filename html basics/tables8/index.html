@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All about tables will be studied here</title>
+    <link rel="icon" href="pngwing.com.png" />
+  </head>
+  <body>
+    <!-- tr is table row, td is table data, we do table,then caption, then tr then inside tr multiple td then after required columns are done, then new tr and repeat(dont forget th instead of td: table header) -->
+    <!-- for better table, we can use css  -->
+    <!-- table element only expand till the data, not entire row like p tags -->
+    <!-- colspan="" and rowspan="" expands our columns and rows in td tag, value= how much rows/ columns value it'll take  -->
+    <table>
+      <caption>
+        My daily schedule
+        <!-- used to identify table  -->
+      </caption>
+      <thead>
+        <tr>
+          <th>time1</th>
+          <th>time2</th>
+          <th>time3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><time datetime="08:00">8 am</time></td>
+          <td><time datetime="12:00">12 pm</time></td>
+          <td><time datetime="18:00">6 pm</time></td>
+        </tr>
+        <tr>
+          <td>playing</td>
+          <td>coding</td>
+          <td>sleeping</td>
+        </tr>
+        <tr>
+          <td>brushing</td>
+          <td>playing</td>
+          <td>coding</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Free time and footer of this table.</td>
+        </tr>
+      </tfoot>
+    </table>
+    <!-- shortcut:table>caption/caption> now 3 divisions: thead then tbody then tfoot> inside them tr>td, except for thead, there tr>th like that -->
+  </body>
+</html>

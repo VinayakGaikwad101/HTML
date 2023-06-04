@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All about Forms and Input</title>
+    <link rel="icon" href="pngwing.com.png" />
+  </head>
+  <body>
+    <h2>Today we will perform 2 way communication using html</h2>
+    <h3>This is useful in javascript</h3>
+    <br />
+    <hr />
+    <br />
+    <form action="https://httpbin.org/get" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <!-- legend is for box -->
+        <p>
+          <label for="firstName">First Name:</label>
+          <!-- label is used for input, for attribute is used for what type of input  -->
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="Enter Your FirstName"
+            autocomplete="on"
+            required
+            autofocus
+          />
+        </p>
+        <!-- p tag to make them block(input is inline element tag ) -->
+        <p>
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Enter Your LastName"
+            autocomplete="on"
+            required
+          />
+        </p>
+        <p>
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="Password"
+            id="password"
+            placeholder="Enter Password"
+            required
+          />
+          <!-- type here is password and not text, then only itll appear as stars -->
+          <!-- autocomplete not supported on password  -->
+        </p>
+        <p>
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="5555555555"
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+            autocomplete
+            required
+          />
+        </p>
+
+        <p>
+          <label for="number">Favourite decade:</label>
+          <input
+            type="number"
+            name="decade"
+            id="decade"
+            min="1920"
+            max="2020"
+            step="10"
+            value="1980"
+          />
+          <!-- step is intervals  -->
+          <!-- value is placeholder for number type  -->
+          <!-- in placeholder, that suggests user the eg number -->
+          <!-- pattern attribute is used in tel -->
+          <!-- type tel opens up an only numeric keypad in mobile devices -->
+          <!-- no phone type, instead use tel type here-->
+        </p>
+        <p>
+          <label for="coffee"> Favourite Coffee: </label>
+          <select name="Coffee" multiple id="coffees" size="5">
+            <!-- multiple means we can select many -->
+            <!-- size means how many we can see at once -->
+            <optgroup label="Coffees">
+              <option value="regular coffee">Regular Coffee</option>
+              <option value="cold coffee">Cold Coffee</option>
+              <option value="red coffee" selected>Red Coffee</option>
+            </optgroup>
+            <optgroup label="Espresso Drinks">
+              <option value="latte">Latte</option>
+              <option value="cappuccino">Cappuccino</option>
+              <option value="americano">Americano</option>
+            </optgroup>
+            <option value="Others">
+              I don't drink coffee, I'm a man of culture
+            </option>
+          </select>
+          <!-- to show an option by default, do selected -->
+        </p>
+
+        <!-- id of input and for of label should be exact same name  -->
+        <!-- name of input is how the input tag is identified at server level, so it can be different than the for of label, unlike in case of id -->
+        <!-- placeholder is what will appear in the input putting place, we can do example data in it too-->
+        <!-- autocomplete attribute(on/off attribute, on is suggested) is very imp, it gives user option to fill out data automatically if the user had filled it earlier  -->
+        <!-- required is used if the field is compulsory, if it is entered, it is on. If it is not entered, it is off automatically -->
+        <!-- autofocus means there will be cursor immediately in the input, use it only if the input is directly at the frontpage, else if the input is down,dont turn it on. Also only one element can have autofocus, so no use of doing it for multiple input tags  -->
+
+        <!-- here below is another better way to make such thingy: -->
+        <p>
+          <label for="coffee">Favourite Coffee:</label>
+          <input type="text" name="coffee" id="coffee" list="coffee-list" />
+          <datalist id="coffee-list">
+            <!-- inputs list attr and datalists id atttr must be same -->
+            <option value="coffee"></option>
+            <option value="latte"></option>
+            <option value="espresso"></option>
+            <option value="cortado"></option>
+            <option value="americano"></option>
+            <option value="other"></option>
+          </datalist>
+        </p>
+      </fieldset>
+      <!-- above is better as we can type and then the list automatically narrows down our search -->
+      <br />
+      <hr />
+      <br />
+      <fieldset>
+        <legend>Whaat is ur fav food?</legend>
+        <!-- same name, so when one is selected, other is deselected -->
+        <p>
+          <input type="radio" name="food" id="tacos" value="tacos" />
+          <label for="tacos">Tacos</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="pizza" value="pizza" />
+          <label for="pizza">Pizza</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="popcorn" value="popcorn" />
+          <label for="popcorn">Popcorn</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="maggie" value="maggie" />
+          <label for="maggie">Maggie</label>
+        </p>
+      </fieldset>
+      <hr />
+      <br /><br />
+      <fieldset>
+        <legend>Do you have pets?</legend>
+        <p>
+          <input type="checkbox" name="pets" id="dog" value="dog" />
+          <label for="dog">Dog</label>
+        </p>
+        <p>
+          <input type="checkbox" name="pets" id="cat" value="cat" />
+          <label for="cat">Cat</label>
+        </p>
+        <p>
+          <input type="checkbox" name="pets" id="otherPet" value="otherPet" />
+          <label for="otherPet">Others</label>
+        </p>
+        <!-- checkbox allow multiple selection -->
+      </fieldset>
+      <br />
+      <hr />
+      <br />
+      <fieldset>
+        <legend>Send Me A Note:</legend>
+        <label for="message">Your Message:</label>
+        <br />
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Type ur message here"
+        ></textarea>
+      </fieldset>
+      <br />
+      <hr />
+      <br />
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <!-- <input type="button" value=""> also works, but it takes only text values -->
+    </form>
+    <!-- form tag is used -->
+    <!-- action attribute tells where to feed this data entered in the form tag, there is a website where we can see this input data -->
+    <!-- https://httpbin.org/get in action attribute  -->
+  </body>
+</html>

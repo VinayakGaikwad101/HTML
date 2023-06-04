@@ -1,0 +1,109 @@
+<!-- it is good practise to keep all images in a separate folder within the main folder called "img" -->
+<!-- image generator website http://via.placeholder.com/640*360 (or any size), first is width -->
+<!-- unsplash.com for free to use images  -->
+<!-- pexels.com for free to use images -->
+<!-- gratisography.com -->
+<!-- pixabay.com  -->
+<!-- IrfanView software for editing images as we like>>images>>resize/resample>>dimenionsedit>>savea>>location -->
+<!-- figcaption tells that the info is directly related to image to the browser and assistive 
+    technology, and not necessarily related to alt attribute. It appears below/above the image and can be used 
+    tied up with other p tags as well -->
+<!-- always use this format for an image: -->
+<!-- <figure> -->
+<!-- <img src="" alt=""> -->
+<!-- <figcaption> -->
+<!-- </figcaption> -->
+<!-- </figure> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/pngwing.com.png" />
+    <title>All about images</title>
+  </head>
+  <body>
+    <p>This is a webpage</p>
+    <hr />
+    <figure>
+      <img
+        src="img/001.jpg"
+        alt="Meeting before the beginning of it"
+        title="Meeting pic"
+        width="200"
+        height="
+     100"
+        loading="eager"
+      />
+      <figcaption>Meeting of 2002</figcaption>
+    </figure>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, a
+      maxime at sed adipisci impedit non, in sit itaque asperiores quia tenetur
+      reprehenderit, illo doloremque possimus similique quidem quaerat. Omnis
+      odio itaque harum quaerat esse quisquam ut architecto ex at molestiae
+      explicabo dolore distinctio voluptatem inventore et accusamus, voluptatum
+      quam totam quas beatae cum sint adipisci numquam. Possimus, unde. Repellat
+      in quasi temporibus dolores. Distinctio, corporis? Exercitationem
+      explicabo doloremque eum esse deleniti, magnam voluptatem assumenda alias
+      facilis delectus enim reiciendis. Atque eum modi laudantium quo sequi
+      cumque iste vero.
+    </p>
+    <hr />
+    <br />
+    <p>
+      There are people who are sitting and discussing something here in white
+      shirts
+    </p>
+    <hr />
+    <br />
+    <figure>
+      <img
+        src="img/002.jpg"
+        alt="People discussing"
+        title="People in white shirts discussing something important"
+        height="120"
+        loading="lazy"
+      />
+      <figcaption>Group Discussion</figcaption>
+    </figure>
+    <!-- 2nd image is below the fold, ie we have to scroll down to see it -->
+    <!-- so we can make it load a bit slowly -->
+    <!-- we use loading attribute in the img tag, it has 2 values, eager which is default and other one is lazy -->
+    <!-- set all images below the fold(ones that are not visible in first instance to lazy value)  -->
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi eius
+      quisquam consequuntur ex ducimus illo, odit, sapiente, facere iusto
+      repellendus qui? Ad fuga odio velit quae similique optio reiciendis
+      explicabo. Eaque quo dolorem illum assumenda debitis culpa pariatur vero,
+      earum consequuntur numquam voluptatibus sed voluptas facere officia
+      inventore quibusdam. Sunt commodi harum, ipsam sed ad impedit corporis
+      pariatur distinctio. Voluptas. Et nihil, nulla error rem excepturi
+      perferendis! Assumenda debitis, natus iure consequatur incidunt alias,
+      earum, veniam non eveniet nostrum voluptatum sequi architecto quidem
+      cumque pariatur voluptas ipsum dolorem labore commodi.
+    </p>
+
+    <hr />
+    <br />
+    <p>Public Speech of 2002</p>
+    <figure>
+      <img src="img/008.jpg" alt="Speech" title="Speech" loading="lazy" />
+    </figure>
+    <figcaption>The great meeting of the 2002</figcaption>
+    <!-- foldername/filename format  -->
+    <!-- title attribute o it says text when we hover over the image  -->
+
+    <hr />
+    <br />
+    <hr />
+    <figure>
+      <figcaption>Example of HTML code:</figcaption>
+      <p><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></p>
+    </figure>
+    <!-- code tag is used to display code  -->
+  </body>
+</html>
